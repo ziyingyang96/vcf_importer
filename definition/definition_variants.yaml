@@ -1,0 +1,17 @@
+callset_id: callset_id
+digset: digset
+id: id
+reference_name: ref
+info:
+  var_length: ID
+  cnv_value: [CALLS, DATA, CN]
+
+biosample_id:
+
+
+variant_type: ALT
+assemblyId: GRCh38
+chromosome: CHROM
+start: POS
+end: [INFO, END]
+type: [INFO, SVTYPE]

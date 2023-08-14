@@ -1,0 +1,11 @@
+assemblyId: GRCh38
+chromosome: CHROM
+referenceBases: REF
+alternateBases: ALT
+start: POS
+end: [INFO, END]
+type: [INFO, SVTYPE]
+info: 
+  variant_id: ID
+  sample_id: [CALLS, NAME] 
+  genotype: [CALLS, DATA, GT]
