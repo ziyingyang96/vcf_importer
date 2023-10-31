@@ -17,7 +17,7 @@ class Variant:
         self.POS = pos
         self.ID = id
         self.REF = ref
-        self.ALT = alt
+        self.ALT = str(alt)[2:5]
         self.QUAL = qual
         self.FILTER = filter
         self.INFO = info

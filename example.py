@@ -5,8 +5,7 @@ converter = vcfConverter(vcf_file = 'samples/HG00096.cnv.vcf')
 beacon_struct = converter.convertVariants(def_file = 'definition/definition_cnv.yaml')
 
 for s in beacon_struct:
-    #print(str(s["alternateBases"])[2:5])
-    s["alternateBases"]=str(s["alternateBases"])[2:5]
+    
     print(s)
 with open("HG00096.json", "w") as outfile:
     json.dump(beacon_struct, outfile)
