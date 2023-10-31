@@ -12,23 +12,21 @@
 # VCF variants and calls
 class Variant:
 
-    def __init__(self, callset_id, digset, id, ref, variant_type, filter, info, biosample_id, start, end):
-        self.callset_id = callset_id
-        self.digset = digset
+    def __init__(self, chrom, pos, id, ref, alt, qual, filter, info):
+        self.CHROM = chrom
+        self.POS = pos
         self.ID = id
         self.REF = ref
-        self.variant_type = variant_type
+        self.ALT = alt
+        self.QUAL = qual
         self.FILTER = filter
         self.INFO = info
-        self.biosample_id = biosample_id
-        self.start = start
-        self.end = end
         self.CALLS = []
         self.PASS = True
 
     def __repr__(self):
-        return 'callset_id:{}; digset:{}; id:{}; ref:{}; variant_type:{}; filter:{}; info:{}; biosample_id:{}; start:{}; end: {}; \ncalls:{}'.format(self.callset_id,
-            self.digset, self.ID, self.REF, self.variant_type, self.FILTER, self.INFO, self.biosample_id, self.start, self.end, self.CALLS)
+        return 'chro:{}; pos:{}; id:{}; ref:{}; alt:{}; qual:{}; filter:{}; info:{};\ncalls:{}'.format(self.CHROM,
+            self.POS, self.ID, self.REF, self.ALT, self.QUAL, self.FILTER, self.INFO, self.CALLS)
 
 
     # to traverse nested dictionary keys

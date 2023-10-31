@@ -22,10 +22,10 @@ class vcfConverter:
 
         for record in vcf_reader:
             variant = Variant(record.CHROM, 
-                              record.POS-1,
+                              record.POS, 
                               record.ID, 
                               record.REF, 
-                              record.ALT, 
+                              record.ALT,
                               record.QUAL, 
                               record.FILTER, 
                               record.INFO)
