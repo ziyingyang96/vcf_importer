@@ -12,8 +12,9 @@
 # VCF variants and calls
 class Variant:
 
+
     def __init__(self, chrom, pos, id, ref, alt, qual, filter, info):
-        self.CHROM = chrom
+        self.CHROM = chrom.split("r")[1]
         self.POS = pos
         self.ID = id
         self.REF = ref
@@ -23,6 +24,9 @@ class Variant:
         self.INFO = info
         self.CALLS = []
         self.PASS = True
+        self.VARIANT_INTERNAL_ID = ""
+        self.VARIANT_TYPE = ""
+
 
     def __repr__(self):
         return 'chro:{}; pos:{}; id:{}; ref:{}; alt:{}; qual:{}; filter:{}; info:{};\ncalls:{}'.format(self.CHROM,

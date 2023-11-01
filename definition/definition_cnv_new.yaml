@@ -1,0 +1,12 @@
+biosample_id: [CALLS, NAME]
+variant_internal_id: VARIANT_INTERNAL_ID
+variant_type:  VARIANT_TYPE
+start: POS
+end: [INFO, END]
+reference_name: CHROM
+info:
+  legacy_id: ID
+  cn_count: [CALLS, DATA, CN]
+  cn_value: [CALLS, DATA, SM]
+
+
